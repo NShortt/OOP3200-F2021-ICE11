@@ -5,8 +5,8 @@ import java.util.Vector;
 public class Vector2D
 {
     // PRIVATE INSTANCE VARIABLES
-    private float x;
-    private float y;
+    protected float x;
+    protected float y;
 
     // PUBLIC PROPERTIES (MUTATORS & ACCESSORS)
     public float getX()
@@ -92,7 +92,7 @@ public class Vector2D
 
     public float getMagnitude()
     {
-        return (float)(Math.sqrt(this.getX() * this.getX() + this.getY() * this.getY()));
+        return (float)(Mathf.Sqrt(this.getX() * this.getX() + this.getY() * this.getY()));
     }
 
     public float getSqrMagnitude()
@@ -190,10 +190,10 @@ public class Vector2D
 
     public static float distance(final Vector2D a, final Vector2D b)
     {
-	final var delta_x = (double)(b.getX()) - (double)(a.getX());
-	final var delta_y = (double)(b.getY()) - (double)(a.getY());
+	    final var delta_x = (double)(b.getX()) - (double)(a.getX());
+	    final var delta_y = (double)(b.getY()) - (double)(a.getY());
 
-    return (float)(Math.sqrt(delta_x * delta_x + delta_y * delta_y));
+        return (float)(Mathf.Sqrt(delta_x * delta_x + delta_y * delta_y));
     }
 
     public static final Vector2D Random(final Vector2D start, final Vector2D end)
